@@ -1,4 +1,6 @@
 import React from "react";
+const cors = require ("cors");
+app.use(cors());
 
 class Register extends React.Component{
     constructor(props){

@@ -1,4 +1,6 @@
 import React from "react";
+const cors = require ("cors");
+app.use(cors());
 
 class  Signin extends React.Component{
     constructor(props){
@@ -16,6 +18,8 @@ class  Signin extends React.Component{
     }
     onSubmitSignin = () =>{
         fetch("https://smart-brain-api-nxc5.onrender.com/signin",{
+            mode:"cors",
+            credentials: "include",
             method:"post",
             headers:{"Content-Type" : "application/json"},
             body: JSON.stringify({
